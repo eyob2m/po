@@ -26,7 +26,7 @@ export default function App(){
       <li><a href="">Home</a></li>
       <li><a href=".about">About</a></li>
       <li><a href="">Skills</a></li>
-      <li><a href="">Services</a></li>
+  
       <li><a href="">Contact</a></li>
     </ul>
   </div>
@@ -61,7 +61,7 @@ export default function App(){
   <b>Who I am</b>
 <p>
 
-My name's Gemechis. I'm a Software Developer based in Addis Ababa, Ethiopia.
+My name's Eyob. I'm a Software Developer based in Addis Ababa, Ethiopia.
 
 Currently I'm Software Engineering student, future Software Engineer. My passion for technology and engineering brought me to the Addis Ababa Science and Technology University. I started computer programming when I was a high school student. Combining my talents with what I learned, I solve the problems in my environment in creative ways.
 </p>
