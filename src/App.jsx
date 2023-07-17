@@ -11,6 +11,35 @@ import css from './assets/css.jpg'
 
 export default function App(){
 
+function hideM(){
+  document.querySelector(".menulist").style.left = "-100px";
+ 
+}
+
+function showM(){
+  document.querySelector(".menulist").style.left = "0px";
+
+}
+
+const [sub,setsub] = React.useState("");
+
+function Fun(e){
+  let style = {
+    color: "black"
+  }
+  
+setsub(e.target.value)
+
+if(sub == "lol") {
+  console.log("nice")
+
+ document.getElementById("subtn").className = "nom";
+}
+
+
+
+}
+
 
 
 
@@ -20,23 +49,26 @@ export default function App(){
 
 <nav>
 <header>
- 
+
   <div className="menu">
-    <ul>
+  <div className="dark-mode"><i className="ri-moon-fill"></i></div>
+  <div className="btm" onClick={showM} ><i className="ri-moon-fill"></i></div>
+
+    <ul className='menulist'>
       <li><a href="">Home</a></li>
       <li><a href=".about">About</a></li>
       <li><a href="">Skills</a></li>
   
       <li><a href="">Contact</a></li>
+      <div onClick={hideM} className="exit">X</div>
     </ul>
   </div>
-  <div className="dark-mode"><i className="ri-moon-fill"></i></div>
-</header>
+ </header>
 
 </nav>
 
 <div className="home">
-<div className="right"></div>
+
 
 <div className="img">
 <img src={pic} alt="" />
@@ -71,34 +103,37 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 
 <div className="skills">
 <div className="in">
+  <h2>Skills</h2>
 <ul>
   <li> <span>Html</span> <img src={htmlp} alt="" /> </li>
   <li> <span>Css</span><img src={css} alt="" /></li>
   <li> <span>Javascript</span><img src={js} alt="" /></li>
   <li> <span>React</span><img src={react} alt="" /></li>
-  <li> <span>Php</span><img src={php} alt="" /></li>
+ 
   <li> <span>Git / Github</span><img src={git} alt="" /></li>
 </ul>
 </div>
 </div>
 
 <div className="contact">
-
+<div className="cbody">
 <div className="con">
+
 <h2>Contact</h2>
 <form action="#">
-<label htmlFor="email">Email</label>
-<input type="email" name='email' />
-<label htmlFor="subject">Subject</label>
-<input type="text" name='subject'/>
+<label  htmlFor="email">Email</label>
+<input onChange={Fun} required type="email" name='email' />
+<label htmlFor="name">Name</label>
+<input required type="text" name='name'/>
 <label htmlFor="msg">Message</label>
-<textarea name="msg" id="" cols="30" rows="10"></textarea>
+<textarea required name="msg" id="" cols="30" rows="10"></textarea>
 
-<button type='submit' >Submit</button>
+<button id='subtn' type='submit' >Submit</button>
 
 
 </form>
-
+</div>
+<div className="otherc">+251985238243 <br />@eyob2m </div>
 </div>
 
 </div>
@@ -111,6 +146,7 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 </ul>
 
 </div>
+
     </>
   )
 }
