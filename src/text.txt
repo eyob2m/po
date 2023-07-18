@@ -130,3 +130,229 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
   )
 }
 
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.124rem;
+  
+}
+
+img {
+width: 100%;
+}
+
+header {
+
+  background-color: red;
+  height: 3em;
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+.hide {
+  display: none;
+}
+
+
+.nav {
+
+  background-color: aqua;
+width: 25%;
+margin: 0 auto;
+}
+
+.nav ul {
+  display: flex;
+font-size: 1.1rem;
+justify-content: space-between;
+padding: 0 1em;
+}
+
+.nav ul li {
+
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+}
+
+.home {
+
+max-width: 1920;
+  display: flex;
+  background-color: blue;
+  padding: 3em 3em;
+ gap: 10em;
+
+}
+
+.cont {
+  width: 85%;
+  background-color: cyan;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+ justify-content: space-between;
+}
+
+.cont .img {
+  width: 100%;
+  background-color: green;
+  max-width: 500px;
+  overflow: hidden;
+
+  min-width: 400px;
+}
+
+.cont .img img {
+  width: 70%;
+min-width: 300px;
+  padding: 2em 2em;
+}
+
+.left h2, .left h3, .left h1, .left p ,.left button{
+  margin-left: 5rem;
+}
+.left h3 {
+  margin-top: -1em;
+}
+.left p {
+  width: 70%;
+  text-align: left;
+}
+
+.cont .left {
+display: flex;
+font-size: 1.4rem;
+gap: 1em;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+  background-color: rgb(74, 74, 106);
+}
+.left button {
+width: 8em;
+padding: .5em 0;
+}
+
+.about {
+  
+max-width: 1920;
+height: 600px;
+gap: 10em;
+margin: 5em 0;
+display: flex;
+align-items: center;
+  background-color: bisque;
+}
+
+.inner {
+  background-color: aqua;
+  margin: 0 auto;
+  width: 40%;
+  padding: 2em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.inner b {
+  color: blue;
+ font-size: 2em;
+
+}
+
+
+@media screen and (max-width: 1024px){
+.about {
+  height: 400px;
+}
+
+.inner {
+  width: 80%;
+  font-size: .9rem;
+}
+
+  .cont {
+    width: 90%;
+    background-color: cyan;
+    margin: 0 auto;
+ height: fit-content;
+    display: flex;
+
+    align-items: center;
+   gap: 3em;
+   flex-direction: column;
+  }
+
+
+
+  .cont .img {
+    width: 100%;
+    background-color: green;
+    max-width: 50%;
+    overflow: hidden;
+  min-width: 300px;
+    background-color: rgb(95, 161, 95);
+
+  
+  }
+  
+  .cont .img img {
+ min-width: 10px;
+  }
+
+
+body {
+  max-width: 100%;
+}
+
+.hide {
+position: fixed;
+  margin: 2.4% 3%;
+}
+.nav {
+
+background-color: blue;
+width: 25%;
+position: fixed;
+top: 3em;
+transition: .7s;
+left: -15em;
+}
+
+.nav ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 0;
+  align-items: center;
+}
+
+
+.hide {
+  display: block;
+}
+
+
+.left h2, .left h3, .left h1, .left p ,.left button{
+  margin-left: 2rem;
+  margin-top: -.5em;
+  font-size: .9em;
+}
+
+}
