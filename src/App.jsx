@@ -82,6 +82,7 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 <div className="skills">
 <div className="in">
   <h2>Skills</h2>
+  <div className="skillslist">
 <ul>
   <li> <span>Html</span> <img src={htmlp} alt="" /> </li>
   <li> <span>Css</span><img src={css} alt="" /></li>
@@ -89,7 +90,7 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
   <li> <span>React</span><img src={react} alt="" /></li>
  
   <li> <span>Git / Github</span><img src={git} alt="" /></li>
-</ul>
+</ul></div>
 </div>
 </div>
 
