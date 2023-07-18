@@ -10,87 +10,62 @@ import htmlp from './assets/html.jpg'
 import css from './assets/css.jpg'
 
 export default function App(){
+const [show,setshow] = React.useState(false)
 
 function hideM(){
-  document.querySelector(".menulist").style.left = "-100px";
- 
-}
 
-function showM(){
-  document.querySelector(".menulist").style.left = "0px";
+ setshow(pr =>!pr)
+
+  document.querySelector(".mlul").style.left=  show ? "0%" :"-100%" ;
 
 }
-
-const [sub,setsub] = React.useState("");
-
-function Fun(e){
-  let style = {
-    color: "black"
-  }
-  
-setsub(e.target.value)
-
-if(sub == "lol") {
-  console.log("nice")
-
- document.getElementById("subtn").className = "nom";
-}
-
-
-
-}
-
-
-
 
   return (
     <>
 
 
-<nav>
+
 <header>
 
-  <div className="menu">
-  <div className="dark-mode"><i className="ri-moon-fill"></i></div>
-  <div className="btm" onClick={showM} ><i className="ri-moon-fill"></i></div>
+<div className="hidem" onClick={hideM} ><i className="ri-menu-line"></i></div>
 
-    <ul className='menulist'>
+<div className="menulist">
+    <ul className='mlul'>
       <li><a href="">Home</a></li>
       <li><a href=".about">About</a></li>
       <li><a href="">Skills</a></li>
-  
       <li><a href="">Contact</a></li>
-      <div onClick={hideM} className="exit">X</div>
+
     </ul>
-  </div>
+    </div>
  </header>
 
-</nav>
-
-<div className="home">
 
 
-<div className="img">
-<img src={pic} alt="" />
+<main>
+
+
+<div className="left">
+<img src={pic} alt="Eyob" />
 
 </div>
-  <div className="left">
+  <div className="right">
   
  <h2>Hello i'm</h2>
- <b>Eyob Betemariam</b>
- <span>Frontend Developer</span>
+ <h1>Eyob Betemariam</h1>
+ <h3>Frontend Developer</h3>
   <p>Im Currently software engineering student at aastu interested in working as freelance , parttime and full time frontend developer
   </p> 
   <button>Download CV</button>
   </div>
  
-</div>
+</main>
 
 
 
 <div className="about">
-  <div className="inner">
-  <b>Who I am</b>
+  <div className="about-info">
+  <h2>Who I am</h2>
 <p>
 
 My name's Eyob. I'm a Software Developer based in Addis Ababa, Ethiopia.
@@ -101,6 +76,7 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 </div>
 </div>
 
+
 <div className="skills">
 <div className="in">
   <h2>Skills</h2>
@@ -109,20 +85,21 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
   <li> <span>Css</span><img src={css} alt="" /></li>
   <li> <span>Javascript</span><img src={js} alt="" /></li>
   <li> <span>React</span><img src={react} alt="" /></li>
- 
   <li> <span>Git / Github</span><img src={git} alt="" /></li>
 </ul>
 </div>
 </div>
 
+
+
 <div className="contact">
-<div className="cbody">
-<div className="con">
 
 <h2>Contact</h2>
+
+<div className="form">
 <form action="#">
 <label  htmlFor="email">Email</label>
-<input onChange={Fun} required type="email" name='email' />
+<input  required type="email" name='email' />
 <label htmlFor="name">Name</label>
 <input required type="text" name='name'/>
 <label htmlFor="msg">Message</label>
@@ -133,10 +110,17 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 
 </form>
 </div>
-<div className="otherc">+251985238243 <br />@eyob2m </div>
-</div>
+<div className="number">
++251985238243 <br />@eyob2m 
+
 
 </div>
+</div>
+
+
+
+  
+ 
 <div className="bar">
 <ul>
   <li><a href=""></a><i className="ri-github-fill"></i></li>
