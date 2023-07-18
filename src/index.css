@@ -140,11 +140,82 @@ align-items: center;
 
 }
 
+.skills{
+
+  max-width: 1920;
+  height: 600px;
+  background-color: blue;
+
+
+}
+
+.skills .in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  height: 500px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.skills .in h2 {
+
+  margin-bottom: 3em;
+
+}
+
+.skills .in  li img {
+  padding-top: 30px;
+  filter: grayscale(1);
+
+}
+
+.skills .in ul li {
+  width: 13%; 
+  max-width: 20%;
+  text-decoration: none;
+
+}
+
+.in ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
 
 @media screen and (max-width: 1024px){
 .about {
   height: 400px;
 }
+
+.skills {
+display: flex;
+overflow: hidden;
+  height: 400px;
+  align-items: center;
+  }
+.skills .in{
+margin: 0 auto;
+height: 300px;
+width: 90%;
+overflow: hidden;
+
+}
+.skills .in ul{
+ width: 150%;
+ 
+ overflow:scroll; 
+   }
+.skills .in ul li{
+ width: 100px;
+
+  
+  }
 
 .inner {
   width: 80%;

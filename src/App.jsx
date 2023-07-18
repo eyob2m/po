@@ -12,7 +12,6 @@ import css from './assets/css.jpg'
 export default function App(){
 const [show,setshow] = React.useState(false)
 
-
 function showf() {
 
 
@@ -94,6 +93,8 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 </div>
 </div>
 
+
+
 <div className="contact">
 <div className="cbody">
 <div className="con">
@@ -129,4 +130,7 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
     </>
   )
 }
+
+
+
 
