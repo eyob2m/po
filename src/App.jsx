@@ -12,13 +12,14 @@ import css from './assets/css.jpg'
 export default function App(){
 const [show,setshow] = React.useState(false)
 
-function hideM(){
 
- setshow(pr =>!pr)
+function showf() {
 
-  document.querySelector(".mlul").style.left=  show ? "0%" :"-100%" ;
 
-}
+ show ? document.querySelector('.nav').style.left = "0em" :  document.querySelector('.nav').style.left = "-15em"
+setshow(pr=>!pr)
+
+  }
 
   return (
     <>
@@ -26,46 +27,45 @@ function hideM(){
 
 
 <header>
-
-<div className="hidem" onClick={hideM} ><i className="ri-menu-line"></i></div>
-
-<div className="menulist">
-    <ul className='mlul'>
+<li onClick={showf} className='hide'><i className="ri-moon-fill"></i></li>
+  <div className="nav">
+    <ul>
       <li><a href="">Home</a></li>
-      <li><a href=".about">About</a></li>
+      <li><a href="">About</a></li>
       <li><a href="">Skills</a></li>
       <li><a href="">Contact</a></li>
-
+      
     </ul>
-    </div>
- </header>
+  
+  </div>
+
+</header>
 
 
+<div className="home">
+<div className="right"></div>
 
-<main>
-
-
-<div className="left">
-<img src={pic} alt="Eyob" />
+<div className="img">
+<img src={pic} alt="" />
 
 </div>
-  <div className="right">
+  <div className="left">
   
  <h2>Hello i'm</h2>
- <h1>Eyob Betemariam</h1>
- <h3>Frontend Developer</h3>
+ <b>Eyob Betemariam</b>
+ <span>Frontend Developer</span>
   <p>Im Currently software engineering student at aastu interested in working as freelance , parttime and full time frontend developer
   </p> 
   <button>Download CV</button>
   </div>
  
-</main>
+</div>
 
 
 
 <div className="about">
-  <div className="about-info">
-  <h2>Who I am</h2>
+  <div className="inner">
+  <b>Who I am</b>
 <p>
 
 My name's Eyob. I'm a Software Developer based in Addis Ababa, Ethiopia.
@@ -76,7 +76,6 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 </div>
 </div>
 
-
 <div className="skills">
 <div className="in">
   <h2>Skills</h2>
@@ -85,18 +84,17 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
   <li> <span>Css</span><img src={css} alt="" /></li>
   <li> <span>Javascript</span><img src={js} alt="" /></li>
   <li> <span>React</span><img src={react} alt="" /></li>
+ 
   <li> <span>Git / Github</span><img src={git} alt="" /></li>
 </ul>
 </div>
 </div>
 
-
-
 <div className="contact">
+<div className="cbody">
+<div className="con">
 
 <h2>Contact</h2>
-
-<div className="form">
 <form action="#">
 <label  htmlFor="email">Email</label>
 <input  required type="email" name='email' />
@@ -110,17 +108,10 @@ Currently I'm Software Engineering student, future Software Engineer. My passion
 
 </form>
 </div>
-<div className="number">
-+251985238243 <br />@eyob2m 
-
-
-</div>
+<div className="otherc">+251985238243 <br />@eyob2m </div>
 </div>
 
-
-
-  
- 
+</div>
 <div className="bar">
 <ul>
   <li><a href=""></a><i className="ri-github-fill"></i></li>
